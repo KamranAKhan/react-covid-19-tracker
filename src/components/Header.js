@@ -40,7 +40,7 @@ export default function Header(props) {
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar>
-          <Toolbar>
+          <Toolbar style={{padding:0}}>
             <Container>
               <Typography variant="h6">
                 Covid 19 Tracking System
