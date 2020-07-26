@@ -155,6 +155,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         width: '100%',
+        marginTop: 20,
         marginBottom: theme.spacing(2),
     },
     table: {
@@ -232,8 +233,7 @@ export default function TableData(props) {
                             rowCount={rows.length}
                         />
                         <TableBody>
-                            {stableSort(rows, getComparator(order, orderBy))
-                                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                            {stableSort(rows, getComparator(order, orderBy))                                
                                 .map((row, index) => {
                                     const isItemSelected = isSelected(row.name);
                                     const labelId = `enhanced-table-checkbox-${index}`;
