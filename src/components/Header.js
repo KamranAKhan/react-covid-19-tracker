@@ -10,8 +10,6 @@ import Container from '@material-ui/core/Container';
 import Slide from '@material-ui/core/Slide';
 
 
-
-
 function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -43,7 +41,9 @@ export default function Header(props) {
       <HideOnScroll {...props}>
         <AppBar>
           <Toolbar>
+          <Container>
             <Typography variant="h6">Covid 19 Tracking System </Typography>
+          </Container>            
           </Toolbar>
         </AppBar>
       </HideOnScroll>

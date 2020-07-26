@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
@@ -19,10 +14,8 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        marginTop: 20,
-        textAlign: 'center',
+        textAlign: 'center',        
+        marginTop: 20,        
         color: '#ffffff'
     },
     bluePaper: {
@@ -38,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#cc4646'
     },
     lightPurple:{
-        backgroundColor: '#94518c'
+        backgroundColor: '#3f78a0'
     },
     golderBrown: {
-        backgroundColor: '#a57f2b'
+        backgroundColor: '#a8ab18'
     },
     paperCountHeading: {
         fontSize: 40,
@@ -87,7 +80,7 @@ function DataGrid(props) {
                     <div className={classesTypography.root} style={{ color: 'blue' }}>
                         <Typography variant="h6" gutterBottom className={classes.paperCountHeading}>
                             {
-                                props.totalCases
+                                (props.totalCases !== undefined)
                                     ? <CountUp delay={0} start={0} duration={2} end={props.totalCases} separator=',' />
 
                                     : <span className={classes.loading}>Loading...</span>
@@ -107,7 +100,7 @@ function DataGrid(props) {
                     <div className={classesTypography.root} style={{ color: 'blue' }}>
                         <Typography variant="h6" gutterBottom className={classes.paperCountHeading}>
                             {
-                                props.totalDeaths
+                                (props.totalDeaths !== undefined)
                                     ? <CountUp delay={0} start={0} duration={2} end={props.totalDeaths} separator=',' />
 
                                     : <span className={classes.loading}>Loading...</span>
@@ -127,7 +120,7 @@ function DataGrid(props) {
                     <div className={classesTypography.root} style={{ color: 'blue' }}>
                         <Typography variant="h6" gutterBottom className={classes.paperCountHeading}>
                             {
-                                props.totalRecovered
+                                (props.totalRecovered !== undefined)
                                     ? <CountUp delay={0} start={0} duration={2} end={props.totalRecovered} separator=',' />
 
                                     : <span className={classes.loading}>Loading...</span>
@@ -147,7 +140,7 @@ function DataGrid(props) {
                     <div className={classesTypography.root} style={{ color: 'blue' }}>
                         <Typography variant="h6" gutterBottom className={classes.paperCountHeading}>
                             {
-                                props.totalNewCasesToday
+                                (props.totalNewCasesToday !== undefined)
                                     ? <CountUp delay={0} start={0} duration={2} end={props.totalNewCasesToday} separator=',' />
 
                                     : <span className={classes.loading}>Loading...</span>
@@ -167,7 +160,7 @@ function DataGrid(props) {
                     <div className={classesTypography.root} style={{ color: 'blue' }}>
                         <Typography variant="h6" gutterBottom className={classes.paperCountHeading}>
                             {
-                                props.totalDeathsToday
+                                (props.totalDeathsToday !== undefined)
                                     ? <CountUp delay={0} start={0} duration={2} end={props.totalDeathsToday} separator=',' />
 
                                     : <span className={classes.loading}>Loading...</span>
@@ -187,7 +180,7 @@ function DataGrid(props) {
                     <div className={classesTypography.root} style={{ color: 'blue' }}>
                         <Typography variant="h6" gutterBottom className={classes.paperCountHeading}>
                             {
-                                props.totalSeriousCases
+                                (props.totalSeriousCases !== undefined)
                                     ? <CountUp delay={0} start={0} duration={2} end={props.totalSeriousCases} separator=',' />
 
                                     : <span className={classes.loading}>Loading...</span>
