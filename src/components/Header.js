@@ -33,7 +33,7 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 
-export default function Header(props) {  
+export default function Header(props) {
 
   return (
     <React.Fragment>
@@ -41,16 +41,18 @@ export default function Header(props) {
       <HideOnScroll {...props}>
         <AppBar>
           <Toolbar>
-          <Container>
-            <Typography variant="h6">Covid 19 Tracking System </Typography>
-          </Container>            
+            <Container>
+              <Typography variant="h6">
+                Covid 19 Tracking System
+              </Typography>
+            </Container>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
       <Toolbar />
       <Container>
         <Box my={2}>
-          
+
         </Box>
       </Container>
     </React.Fragment>

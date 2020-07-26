@@ -190,10 +190,8 @@ export default function TableData(props) {
     const classes = useStyles();
     const [order, setOrder] = React.useState('asc');
     const [orderBy, setOrderBy] = React.useState('calories');
-    const [selected, setSelected] = React.useState([]);
-    const [page] = React.useState(0);
-    const [dense] = React.useState(false);
-    const [rowsPerPage] = React.useState(100);
+    const [selected, setSelected] = React.useState([]);    
+    const [dense] = React.useState(false);    
 
     const handleRequestSort = (event, property) => {
         const isAsc = orderBy === property && order === 'asc';
